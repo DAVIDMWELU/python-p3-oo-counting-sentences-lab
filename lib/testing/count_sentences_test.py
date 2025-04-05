@@ -17,8 +17,8 @@ class TestMyString:
         '''prints "The value must be a string." if not string.'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        string = MyString()
-        string.value = 123
+        string = MyString(123)
+
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "The value must be a string.\n")
 
